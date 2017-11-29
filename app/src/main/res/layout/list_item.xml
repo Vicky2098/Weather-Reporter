@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp"
+    tools:background="#000000"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/fmin_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ftemp"
+        android:layout_below="@+id/ftemp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        tools:text="20/21"/>
+
+    <ImageView
+        android:id="@+id/ficon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="desc"
+        tools:src="@drawable/w6"/>
+
+    <TextView
+        android:id="@+id/ftemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ficon"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/ficon"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        tools:text="23 C"/>
+
+    <TextView
+        android:id="@+id/fdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ficon"
+        android:layout_below="@+id/ficon"
+        android:layout_marginLeft="10dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        tools:text="clouds"/>
+    <TextView
+        android:id="@+id/fhumid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fdesc"
+        android:layout_below="@+id/fmin_max"
+        android:layout_marginLeft="30dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        tools:text="70 %"/>
+    <TextView
+        android:id="@+id/fwindspeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fhumid"
+        android:layout_below="@+id/fmin_max"
+        android:layout_marginLeft="30dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        tools:text="2.6 m/s"/>
+
+
+    <TextView
+        android:id="@+id/fdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ficon"
+        android:background="@drawable/textborder"
+        android:paddingRight="3dp"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        tools:text="05-07-2017"/>
+
+</RelativeLayout>

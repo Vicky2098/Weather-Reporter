@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/w6"
+    tools:context="com.example.android.weather.MainActivity">
+
+
+
+        <EditText
+            android:id="@+id/cityName"
+            android:hint="Enter City Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:textSize="20sp"
+            android:ems="10"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:onClick="Autocomplete" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_below="@+id/cityName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/searchButton"
+            android:text="SEARCH"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/progress_btn_default"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:onClick="Asynctask"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lLayout"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/city"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignLeft="@+id/cityName"
+        android:layout_below="@+id/searchButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/temp"
+        android:layout_below="@+id/city"
+        android:textSize="60sp"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+            android:layout_height="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/temp"
+            android:layout_centerVertical="true"
+            android:layout_width="150dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/condIcon" />
+
+        <TextView
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/minmax"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:id="@+id/condDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/minmax"
+            android:layout_alignLeft="@+id/temp"
+            android:layout_below="@+id/temp"
+            android:layout_marginTop="4dp"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/humidity"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/condDescription"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/windSpeed"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_alignLeft="@+id/temp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@+id/condDescription"
+            android:layout_marginLeft="85dp"
+            android:layout_toRightOf="@+id/humidity"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecast"
+        android:layout_alignParentBottom="true"
+        android:text="Forecast"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:onClick="Forecast"
+        android:background="@drawable/progress_btn_default"/>
+
+
+
+</RelativeLayout>
